@@ -1,7 +1,7 @@
 [//]: # (Image References)
 
-[image1]:trained_agent.gif"Trained Agent2"
-[image2]:p1_navigation_training.png"Graph Training Agent"
+[image1]:./trained_agent.gif"Trained Agent2"
+[image2]:./p1_navigation_training.png"Graph Training Agent"
 # Project 1: Navigation
 
 ### Introduction
