@@ -1,10 +1,10 @@
-#Deep Reinforcement Learning: Project Navigation
+# Deep Reinforcement Learning: Project Navigation
 
 
 I have explored the details from the [DQN Paper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) 
 Then revisited the coding excercise from the lesson Deep Q-Networks. Adapted the code from the lesson, tried to tweak various hyperparameters. Solved the project on my GPU laptop.
 
-###1. Started the Unity enviornment:
+### 1. Started the Unity enviornment:
 ```
 env = UnityEnvironment(file_name="./Banana_Linux/Banana.x86_64")
 ```
@@ -14,21 +14,21 @@ Environments contain brains which are responsible for deciding the actions of th
 
 The simulation contains a single agent that navigates a large environment. At each time step, it has four actions at its disposal:
 
-0 - walk forward
-1 - walk backward
-2 - turn left
-3 - turn right
+- 0 - walk forward
+- 1 - walk backward
+- 2 - turn left
+- 3 - turn right
 The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
 
-###3.Model for agent and neural network
+### 3.Model for agent and neural network
 Agent Class was created in the dqn_agent.py file. It contains satic parameters as mentioned below:
 
-BUFFER_SIZE = int(1e5)  # replay buffer size
-BATCH_SIZE = 64         # minibatch size
-GAMMA = 0.9            # discount factor
-TAU = 1e-3              # for soft update of target parameters
-LR = 4.5e-4               # learning rate 
-UPDATE_EVERY = 4        # how often to update the network
+- BUFFER_SIZE = int(1e5)     # replay buffer size
+- BATCH_SIZE = 64            # minibatch size
+- GAMMA = 0.9                # discount factor
+- TAU = 1e-3                 # for soft update of target parameters
+- LR = 4.5e-4                # learning rate 
+- UPDATE_EVERY = 4           # how often to update the network
 
 While training the agent tweaked some of the parameters. Lesser learning rate and more GAMMA than mentioned above made the training little unstable and solution observed as diverged. 
 Agent object was initialsed with state,action size and NN objects created for target and locat state-value function.
@@ -48,7 +48,7 @@ Training of the agent is implemented as below:
 We also get the information whether the episode is completed (done).
 3. State, action, next state and the reward constitute the experience used to the agent for learning. The agent adds this experience to its replay memory and when there are enough experiences collected it starts learning
  
-### 5.Learning with the prioritized experience replay, fixed Q-targets and Double DQN :
+### 5. Experience replay, fixed Q-targets and Double DQN :
 
 1. A batch of experiences is sampled from the replay memory.
 2. For each experience, the next action for the next state is selected to maximize the Q-values estimated from 
@@ -79,7 +79,7 @@ The complete architecture is as follows:
 - Output layer: 4 nodes (number of actions)
 
 
-###Results
+### Results
 
 The agent was able to solve the environment by achieving score of 13 over 100 consecutive episodes after 550 episodes.
 
