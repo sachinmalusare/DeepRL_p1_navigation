@@ -8,7 +8,7 @@
 
 For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
 
-![Trained Agent2][image1]
+<p align=center><img src="trained_agent.gif" alt="agent" width="400" height="200"/></p>
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
@@ -39,6 +39,6 @@ The task is episodic, and in order to solve the environment, your agent must get
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 Below is the plot while training the agent. I could able to solve it within 1500 episodes.
 
-![Graph Training Agent][image2]
+<p align=center><img src="p1_navigation_training.png" alt="scores" width="400"/></p>
 
 Description of the implementation is provided in in report.md. 
