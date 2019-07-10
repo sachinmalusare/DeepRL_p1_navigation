@@ -79,13 +79,17 @@ The complete architecture is as follows:
 - Output layer: 4 nodes (number of actions)
 
 
-### Results
+### 7. Results
 
 The agent was able to solve the environment by achieving score of 13 over 100 consecutive episodes after 550 episodes.
 
 <p align=center><img src="p1_navigation_training.png" alt="scores" width="400"/></p>
 
 
-### 4. Watch a Smart Agent!
+### 8. Watch a Smart Agent!
 Loaded the trained weights from file to watch a smart agent!
 <p align=center><img src="trained_agent.gif" alt="agent" width="400" height="200"/></p>
+
+### 9. Future work
+1. A more systematic way of searching of optimal values for hyperparameters
+2. Implementing other extensions of DQN, e.g. Dueling DQN, distributional DQN, Noisy DQN
